@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Accordion Example </title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <script>
+         $(function() {
+            $( "#accordion-3" ).accordion({
+               heightStyle: "content"
+            });
+            $( "#accordion-4" ).accordion({
+               heightStyle: "fill"
+            });
+         });
+      </script>
+      
+      <style>
+         #accordion-3, #accordion-4{font-size: 14px;}
+      </style>
+   </head>
+   
+   <body>
+      <h3>Height style-content</h3>
+      <div style = "height:250px">
+         <div id = "accordion-3">
+            <h3>Tab 1</h3>
+            <div>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore 
+                  magna aliqua.
+               </p>
+               <ul>
+                  <li>List item one</li>
+                  <li>List item two</li>
+                  <li>List item three</li>
+                  <li>List item four</li>
+                  <li>List item five</li>
+               </ul>
+            </div>
+            <h3>Tab 2</h3>
+            <div>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore 
+                  magna aliqua.
+               </p>
+            </div>
+            <h3>Tab 3</h3>
+            <div>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore 
+                  magna aliqua. 
+               </p>
+            </div>
+         </div>
+      </div><br><br>
+      
+      <h3>Height style-Fill</h3>
+      <div style = "height:250px">
+         <div id = "accordion-4">
+            <h3>Tab 1</h3>
+            <div>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing 
+                  elit, sed do eiusmod tempor incididunt ut labore 
+                  et dolore magna aliqua.
+               </p>
+               <ul>
+                  <li>List item one</li>
+                  <li>List item two</li>
+                  <li>List item three</li>
+                  <li>List item four</li>
+                  <li>List item five</li>
+               </ul>
+            </div>
+            <h3>Tab 2</h3>
+            <div>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing 
+                  elit, sed do eiusmod tempor incididunt ut labore 
+                  et dolore magna aliqua.
+               </p>
+            </div>
+            <h3>Tab 3</h3>
+            <div>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing 
+                  elit, sed do eiusmod tempor incididunt ut labore 
+                  et dolore magna aliqua. 
+               </p>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

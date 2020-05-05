@@ -1,0 +1,43 @@
+
+<html>
+    <head>
+    <title></title>
+    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+    <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
+    <link href='https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css' rel='stylesheet'>
+    </head>
+    <body>
+    <div id='accordion' class='accordion'>
+     <div class='header'>Header 1 ( panel No. 0 )</div>
+      <div class='content'>
+        Text about Header 1  
+      </div>
+     <div class='header'>Header 2 ( panel No. 1 )</div>
+      <div class='content'>
+        Text about Header 2    
+      </div>
+    <div class='header'>Header 3 ( panel No. 2 )</div> 
+      <div class='content'>
+        Text header 3
+      </div>
+    <div class='header'>Header 4 ( panel No. 3 )</div>
+      <div class='content'>
+        Text about Header 4.
+       </div>
+    </div>
+    <button id=destroy>Destroy</button>
+    
+    <script>
+    $(document).ready(function() {
+    //////////////////////////
+    $( '#accordion' ).accordion({
+    });
+    /////////////
+    $("#destroy").click(function() {
+    $( ".accordion" ).accordion( "destroy" );
+    })
+    /////////////////
+    })
+    </script>
+    </body>
+    </html>

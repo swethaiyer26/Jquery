@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Accordion Example </title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+          #accordion{
+              font-size: large;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          }
+      </style>
+      <script>
+    $(function(){
+        $("#accordion").accordion({
+            create:function(event,ui){
+            $("span#result").html($("span#result").html() + "<b>Create</b><br>");
+            },
+            beforeactivate:function(event,ui) {
+            $("span#result").html($("span#result").html()  + ",<b>beforeActivate</b><br>");
+            },
+            activate:function(event,ui){
+                $("span#result").html($("span#result").html() + "<b>Activate</b><br>");
+            }
+        });
+    });
+      </script>
+      </head>
+      <body>
+        <div id = "accordion">
+            <h3>Tab 1</h3>
+            <div>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore 
+                  magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                  exercitation ullamco laboris nisi ut aliquip ex ea 
+                  commodo consequat. 
+               </p>
+            </div>
+            <h3>Tab 2</h3>
+            <div>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore 
+                  magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                  exercitation ullamco laboris nisi ut aliquip ex ea 
+                  commodo consequat.    
+               </p>
+            </div>
+            </div>
+            <hr>
+            <span id="result"></span>
+      </body>
+      </html>
