@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Buttons functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script>
+$(function(){
+$("#datepicker1").datepicker({
+ prevText:"click for previous months",
+ nextText:"click for next month",
+ showOtherMonths:true,
+ selectOtherMonths:false
+});
+
+$("#datepicker2").datepicker({
+    prevText:"click for previous months",
+    nextText:"click for next month",
+    showOtherMonths:true,
+    selectOtherMonths:true
+});
+});
+</script>
+</head>
+<body>
+    <p>Enter start date:<input type="text" id="datepicker1"></p>
+    <p>Enter end date:<input type="text" id="datepicker2"></p>
+</body>
+</html>
