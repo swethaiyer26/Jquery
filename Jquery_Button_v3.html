@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Buttons functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+        .resultarea{
+            background-color: lightcoral;
+            border-top: lightseagreen;
+            border-bottom: lightseagreen;
+            color: maroon;
+            font-size: 16px;
+        }
+      </style>
+      <script>
+        $(function() {
+        $("#button1").button({
+         create:function() {
+            $("p#result").html ($("p#result").html() + "<b>create</b><br>");
+         }
+        }) ;
+        });
+      </script>
+   </head>
+   <body>
+<button id="button1">A button element</button>
+<p class="resultarea" id="result"></p>
+</body>
+</html>
