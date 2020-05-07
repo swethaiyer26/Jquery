@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Datepicker functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+        .ui-widget-header,.ui-button,.ui-state-default{
+            background:lightskyblue;
+            border: 2px solid blue;
+            color: mediumblue;
+            font-weight: bold;
+        }
+        .invalid{color: mediumblue;}
+        .textarea{
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        </style>
+ <script type="text/javascript">
+$(function(){
+    $("#dialog1").dialog({
+        autoOpen:false,
+        buttons: {
+            OK:function() {
+                $(this).dialog("close");
+            }
+        },
+        beforeClose:function(event,ui){
+            if(!$("#terms").prop("checked")){
+                event.preventDefault();
+            $("[for=terms]").addClass("invalid");
+            }
+        },
+        width:600
+    });
+    $("#opener").click(function(){
+    $("#dialog1").dialog("open");
+    });
+});
+</script>
+</head>
+<body>
+<div id="dialog1">
+    <p>You must accept these terms before continuing.</p>
+    <textarea>This Agreement and the Request constitute the entire agreement of the 
+    parties with respect to the subject matter of the Request. This Agreement shall be 
+    governed by and construed in accordance with the laws of the State, without giving 
+    effect to principles of conflicts of law.</textarea>
+    <div>
+    <label for="terms"></label>
+    <input type="checkbox" id="terms">
+    </div> 
+</div>
+<button id="opener">Open Dialog</button>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Datepicker functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+        .ui-widget-header,.ui-button,.ui-state-default{
+            background:lightskyblue;
+            border: 2px solid blue;
+            color: mediumblue;
+            font-weight: bold;
+        }
+      </style>
+      <script>
+        $(function() {
+        $("#dialog").dialog({
+         autoOpen:false,
+         hide:"puff",
+         height:300,
+         show:"slide"
+        });
+        $("#opener").click(function(){
+        $("#dialog").dialog("open");
+        });
+        });
+      </script>
+      </head>
+      <body>
+        <div id="dialog" title="dialog title goes here">This is a dialog box</div>
+        <button id="opener">Open Dialog</button>
+      </body>
+      </html>
