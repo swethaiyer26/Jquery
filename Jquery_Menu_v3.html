@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Menu functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <!-- CSS -->
+      <style>
+         .ui-menu {
+            width: 200px;
+         }
+      </style>
+      <script>
+          $(function(){
+              var menu=$("#menu").menu;
+              $("#menu").menu(
+                  "focus",null,$("#menu").menu().find("ui-menu-item:last-child"));
+             $(menu).mouseleave(function(){
+                 menu.menu('collapseAll');
+             });
+          });
+      </script>
+         <body>
+            <!-- HTML --> 
+            <ul id = "menu">
+               <li><a href = "#">Spring</a></li>
+               <li><a href = "#">Hibernate</a></li>
+               <li><a href = "#">JSF</a></li>
+               <li><a href = "#">HTML5</a></li>
+               <li><a href = "#">Java</a>
+                  <ul>
+                     <li><a href = "#">Java IO</a></li>
+                     <li><a href = "#">Swing</a></li>
+                     <li><a href = "#">Jaspr Reports</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </body>
+      </html>
