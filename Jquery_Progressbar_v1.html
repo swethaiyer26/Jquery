@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI ProgressBar functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <style>
+         .ui-widget-header {
+            background: #cedc98;
+            border: 1px solid #DDDDDD;
+            color: #333333;
+            font-weight: bold;
+         }
+      </style>
+      
+      <script>
+         $(function() {
+            $( "#progressbar-3" ).progressbar({
+               value: 30
+            });
+            $( "#progressbar-3" ).progressbar('disable');
+            $( "#progressbar-4" ).progressbar({
+               value: 30
+            });
+            var progressbar = $( "#progressbar-4" );
+            $( "#progressbar-4" ).progressbar( "option", "max", 1024 );
+            function progress() {
+               var val = progressbar.progressbar( "value" ) || 0;
+               progressbar.progressbar( "value", val + 1 );
+               if ( val < 99 ) {
+                  setTimeout( progress, 100 );
+               }
+            }
+            setTimeout( progress, 3000 );
+         });
+      </script>
+   </head>
+   
+   <body>
+      <h3>Disabled Progressbar</h3>
+      <div id = "progressbar-3"></div><br>
+      <h3>Progressbar with max value set</h3>
+      <div id = "progressbar-4"></div>
+   </body>
+</html>
