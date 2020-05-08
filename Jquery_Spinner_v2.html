@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Slider functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+          #spinner1{width: 100px;}
+      </style>
+      <script>
+        $(function(){
+        $("#spinner1").spinner({
+            icons:{
+                down:"custom-down-icon", up:"custom-up-icon"
+            }
+        });
+        });
+      </script>
+      </head>
+      <body>
+        <div id="example">
+        <input type="text" id="spinner1" value="0"/>
+        </div>
+      </body>
+      </html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Spinner functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <script src = "/jqueryui/jquery-ui-1.10.4/external/jquery.mousewheel.js"></script>
+      <script src = "/jqueryui/jquery-ui-1.10.4/external/globalize.js"></script>
+      <script src = "/jqueryui/jquery-ui-1.10.4/external/globalize.culture.de-DE.js"></script>
+      <script>
+    $(function(){
+    $("#spinner").spinner({
+        page:10,
+        numberFormat:"C",
+        culture:"de-DE",
+        step:2
+    });
+    });
+</script>
+</head>
+<body>
+    <p>
+<label for = "spinner">Amount to donate:</label>
+<input id = "spinner" name = "spinner" value = "5">
+ </p>
+</body>
+</html>

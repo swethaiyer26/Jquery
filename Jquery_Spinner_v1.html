@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Slider functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+          #spinner1,#spinner2{width: 100px;}
+      </style>
+      <script>
+    $(function(){
+    $("#spinner1").spinner({
+        min:-20,
+        max:20
+    });
+    $("#spinner2").spinner({
+        step:100,
+        min:-1000000,
+        max:1000000
+    });
+    });
+      </script>
+   </head>
+   <body>
+    <div id="example">
+        Set min,max value
+    <input type="text" id="spinner1" value="0"/><br><br>
+    Set min,max values with step
+    <input type="text" id="spinner2" value="0"/>
+    </div>
+   </body>
+   </html>
