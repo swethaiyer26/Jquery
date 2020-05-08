@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Menu functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <script>
+        $(function(){
+            $("#slider1").slider({
+                orientation:"vertical"
+            });
+            $("#slider1").slider('disable');
+            $("#slider2").slider({
+                orientation:"vertical",
+                value:50,
+                slide:function(event,ui){
+                $("#minval").val(ui.value);
+                }
+            });
+            $("#minval").val($("#slider1").slider("value"));
+        });
+      </script>
+      </head>
+      <body>
+        <div id="slider1"></div>
+        <p>
+         <label for="minval">Minimum value</label>
+         <input type="text" id="minval" style="border:0;color: crimson;font-weight: bold;">
+        </p>
+        <div id="slider2"></div>
+      </body>
+      </html>

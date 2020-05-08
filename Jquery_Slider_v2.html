@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Menu functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <script>
+        $(function(){
+        $("#slider").slider({
+         range:true,
+         min:0,
+         max:100,
+         values:[20,70],
+         slide:function(event,ui){
+            $("#price").val("$" + ui.values[0] + "- $" + ui.values[1]);
+         }
+        });
+        $("#price").val("$" + $("#slider").slider("values",0) + "-$"("#slider").slide("values",1));
+        });
+      </script>
+   </head>
+   <body>
+    <p>
+        <label for = "price">Price range:</label>
+        <input type = "text" id = "price" 
+           style = "border:0; color:#b9cd6d; font-weight:bold;">
+     </p>
+<div id="slider">Slider</div>
+    </body>
+    </html>
