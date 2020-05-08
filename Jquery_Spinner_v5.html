@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Spinner functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+  <style type = "text/css">
+         #spinner1{width: 100px}
+      </style>
+      <script>
+        $(function(){
+        $("#spinner1").spinner();
+        $("#button").button();
+        $("#stepup").click(function(){
+        $("#spinner1").spinner("enable");
+        });
+        $("#stepdown").click(function(){
+        $("#spinner1").spinner("disable");
+        });
+        });
+      </script>
+      </head>
+      <body>
+        <input id="spinner1">
+        <br/>
+        <button id="stepup">Stepup</button>
+        <button id="stepdown">Stepdown</button>
+      </body>
+      </html>

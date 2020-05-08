@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Spinner functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <!-- CSS -->
+      <style type = "text/css">
+         #spinner-8 input {width: 100px}
+      </style>
+      
+      <!-- Javascript -->
+      <script>
+         $(function() {
+            $( "#spinner-8" ).spinner({
+               spin: function( event, ui ) {
+                  var result = $( "#result-2" );
+                  result.append( "Spin Value: "+$( "#spinner-8" ).spinner("value") );
+               },
+               change: function( event, ui ) {
+                  var result = $( "#result-2" );
+                  result.append( "Change value: "+$( "#spinner-8" ).spinner("value") );
+               },
+               stop: function( event, ui ) {
+                  var result = $( "#result-2" );
+                  result.append( "Stop value: "+$( "#spinner-8" ).spinner("value") );
+               }
+            });
+         });
+      </script>
+   </head>
+   
+   <body>
+      <!-- HTML --> 
+      <div id = "example">
+         <input type = "text" id = "spinner-8" value = "0" />
+      </div>
+      <span id = "result-2"></span>
+   </body>
+</html>
