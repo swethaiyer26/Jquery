@@ -1,0 +1,29 @@
+
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Tooltip functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <script>
+        $(function(){
+        $("#tooltip").tooltip({
+            content:"<strong>Hiii</strong>",
+            track:true
+        }),
+        $("#tooltip1").tooltip({
+            disabled:true
+        });
+        });
+      </script>
+      </head>
+      <body>
+        <label for="name">Message:</label>
+        <input id="tooltip" title="tooltip"><br><br>
+        <label for="name">Tooltip disabled for me</label>
+        <input id="tooltip1" title="tooltip">
+      </body>
+      </html>

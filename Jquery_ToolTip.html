@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Tooltip functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <script>
+          $(function(){
+        $("#tooltip1").tooltip();
+        $("#tooltip2").tooltip();
+          });
+      </script>
+      </head>
+      <body>
+          <label for="name">Name:</label>
+          <input title="Enter you name:" id="tooltip1">
+          <p><a id="tooltip2" href="#" title="Nice tooltip">I also have a tooltip</a></p>
+      </body>
+      </html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Tooltip functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <script>
+          $(function(){
+        $("#tooltip").tooltip({
+            position: { of: '#myInput', my: 'left center', at: 'left center' },
+        }),
+        $('#mybtn').click(function(){
+            $("#tooltip").tooltip("open");
+        });
+          });
+      </script>
+      </head>
+      <body style="padding:100px">
+ <a id="tooltip" title="Message" href="#"></a>
+ <input id="myinput" type="text" name="myinput" value="0" size="7"/>
+ <button id="mybtn" type="submit" name="mybtn" value="mybtn" class="mybtn/">mybtn</button>
+      </body> 
+      </html>
