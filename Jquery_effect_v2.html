@@ -1,0 +1,43 @@
+<html>
+   <head>
+      <title>The jQuery Example</title>
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+		
+      <script type = "text/javascript"
+         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+      </script>
+		
+      <script type = "text/javascript" language = "javascript">
+   
+         $(document).ready(function() {
+
+            $("#big").click(function(){
+               $(".target").effect( "size", { to: {width: 200,height: 200} }, 1000 );
+            });
+
+            $("#small").click(function(){
+               $(".target").effect( "size", { to: {width: 10,height: 10} }, 1000 );
+            });
+				
+         });
+			
+      </script>
+		
+      <style>
+         p {background-color:#bca; width:200px; border:1px solid green;}
+         div{ width:100px; height:100px; background:red;}
+      </style>
+   </head>
+	
+   <body>
+      <p>Click any of the buttons</p>
+		
+      <button id = "big"> Big </button>
+      <button id = "small"> Small </button>
+
+      <div class = "target">
+      </div>
+   </body>
+</html>
