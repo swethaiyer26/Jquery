@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI removeClass Example</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<style>
+.toggler{width:500px;height: 200px;}
+#button{padding:0.5px 1px;text-decoration: none;}
+#effect{
+    padding: 0.4px;width: 200px;height: 130px;position: relative;
+}
+#effect h3{
+    padding:0.4px;margin:0;text-align: center;
+}
+</style>
+<script>
+$(function(){
+function runEffect(){
+$("#effect").show("shake",{times:10,distance:100},1000,callback);
+};
+
+function callback(){
+    setTimeout (function(){
+    $("#effect:visible").removeAttr("style").fadeOut();
+    },1000);
+};
+$("#button").click(function(){
+    runEffect();
+    return false;
+    });
+    $(effect).hide();
+});
+</script>
+</head>
+<body>
+    <div class="toggler">
+        <div id="effect" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-content ui-corner-all">show all</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+            </p>
+         </div>
+        </div>
+<a href="#" id="button" class="ui-state-default ui-corner-all">Run effect</a>
+</body>
+</html>

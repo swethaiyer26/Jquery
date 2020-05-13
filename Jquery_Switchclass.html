@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Switch Class Example</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+        .largeclass{
+            font-size: large;
+            font-weight: bolder;
+           color: mediumblue;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .normalclass{
+            font-size: small;
+            font-weight: bold;
+            color: mediumorchid;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+      </style>
+      <script>
+          $(function(){
+        $("#btnswitch").click(function(){
+        $(".normalclass").switchClass("normalclass","largeclass",'fast');
+        $(".largeclass").switchClass("largeclass","normalclass",'fast');
+        return false;
+        });
+    });
+      </script>
+      </head>
+      <body>
+        <div class="normalclass">Tutorial point rocks</div>
+        <div class="largeclass">welcome to tutorial pont</div>
+      </br>
+      <input type="button" id="btnswitch" value="SwitchClass"/>
+      </body>
+      </html>
