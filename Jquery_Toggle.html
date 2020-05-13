@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Toggle Example</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+        .toggle{width: 400px;height: 200px;}
+        #button{padding: 0.5px 1px;text-decoration: none;}
+        #effect{width: 250px;height: 135px;padding: 0.4px;position: relative;}
+        #effect h3{ margin: 0;padding: 0.4px;text-align: center;}
+      </style>
+      <script>
+        $(function(){
+            function runeffect(){
+        $("#effect").toggle('explode',300);
+            };
+        $("#button").click(function(){
+            runeffect();
+            return false;
+        });
+        });
+      </script>
+      </head>
+      <body>
+<div class="toggle">
+<div id="effect" class="ui-widget-content ui-corner-all">
+    <h3 class = "ui-widget-header ui-corner-all">Toggle</h3>
+    <p>
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+    </p>
+ </div>
+</div>
+<a href="#" id="button" class="ui-state-default ui-corner-all">Click me</a>
+</body>
+</html>
