@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Switch Class Example</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+        .class1{
+            border-width: 10px;
+            border-color: maroon;
+            background-color: mediumseagreen;
+            color:midnightblue;
+        }
+      </style>
+      <script>
+        function toggle() {
+            $("#para").toggleClass("class1",1000);
+        }
+      </script>
+      </head>
+      <body>
+        <button onclick="toggle()">Click me</button>
+        <p id = "para" style = "border-style:solid"> Welcome to Tutorials Point </p>
+      </body>
+      </html>
